@@ -7,6 +7,7 @@ public class Main {
         strings.add("Второе");
         strings.add("Третье");
         strings.add("Первое");
+        strings.add("Второе");
 
         for(String s : strings){
             System.out.println(s);
