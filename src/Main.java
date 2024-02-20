@@ -4,13 +4,14 @@ import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
-        Set<String> strings = new TreeSet<>();
-        strings.add("В");
-        strings.add("А");
-        strings.add("Б");
+        Human vasya = new Human("Вася", 20);
+        Human petya = new Human("Петя", 30);
+        Set<Human> strings = new TreeSet<>();
+        strings.add(vasya);
+        strings.add(petya);
 //        strings.remove("Третье");
 
-        for(String s : strings){
+        for(Human s : strings){
             System.out.println(s);
         }
     }
