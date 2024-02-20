@@ -6,6 +6,7 @@ public class Main {
         strings.add("Первое");
         strings.add("Второе");
         strings.add("Третье");
+        strings.add("Первое");
 
         for(String s : strings){
             System.out.println(s);
