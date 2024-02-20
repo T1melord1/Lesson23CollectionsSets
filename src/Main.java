@@ -1,19 +1,33 @@
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Main {
-    public static void main(String[] args) {
-        Human vasya = new Human("Вася", 20);
-        Human petya = new Human("Петя", 30);
-        Set<Human> strings = new TreeSet<>();
-        strings.add(vasya);
-        strings.add(petya);
-//        strings.remove("Третье");
+    private static Set<String> words = new TreeSet<>();
 
-        for(Human s : strings){
-            System.out.println(s);
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("Введите слово ");
+            String word = new Scanner(System.in).nextLine();
+            if (word.matches("[А-я]+")) {
+                if (words.contains(word)) {
+                    System.out.println("Слово " + word + " уже добавлено ранее");
+                    continue;
+                }
+                words.add(word);
+                System.out.println(word + " успешно добавлено");
+                continue;
+            } else if (word.equals("print"))
+                for (String s : words) {
+                    System.out.println(s);
+                }
+            System.out.println(word + " не русское слово!");
+        }
         }
     }
 
-}
+
+
+
+
