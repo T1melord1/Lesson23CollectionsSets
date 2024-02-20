@@ -22,7 +22,7 @@ public class Main {
                 for (String s : words) {
                     System.out.println(s);
                 }
-            System.out.println(word + " не русское слово!");
+            System.out.println(word + " не русское слово!!");
         }
         }
     }
